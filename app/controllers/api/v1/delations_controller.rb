@@ -8,6 +8,10 @@ class Api::V1::DelationsController < ApplicationController
     render json: @delations
   end
 
+  def show 
+    render json: @delation
+  end
+
   def create
     @delation = Delation.new(delation_params)
     @delation.user = current_user
